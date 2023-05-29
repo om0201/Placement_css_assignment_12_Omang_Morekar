@@ -1,0 +1,329 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap);
+/* => Global Styles */
+:root {
+  --primary-color: #233c7b;
+  --secondary-color: #f7a654;
+  --alternate-color: #327ae7;
+  --light-color: #edecf7;
+  --text-primary-color: #858585;
+  --text-secondary-color: #5877c6;
+  --text-light-color: #fff;
+  --text-dark-color: #454545;
+  --text-darkBlue-color: #000f35;
+  --font-family: "Poppins", sans-serif;
+  --secondary-font-family: "Manrope", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #fcb976 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fcb976;
+  border-radius: 0px;
+  border: 0px solid #ffffff;
+}
+
+/* => Utility Classes */
+.flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 1.438rem;
+  }
+}
+
+/* => Navigation Classes */
+
+.nav-container {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--text-light-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.main-nav-container {
+  justify-content: space-between;
+}
+
+.main-nav-logo-container {
+  flex-basis: 10%;
+}
+
+.ineuron-logo {
+  width: 100%;
+}
+
+.main-nav-search-container {
+  flex-basis: 65%;
+
+  flex-grow: 1;
+  position: relative;
+  margin-left: 1.438rem;
+}
+
+.nav-input-search-icon {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  width: 20px;
+}
+
+.main-nav-search {
+  width: 95%;
+  padding: 10px 10px 10px 48px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  outline: 0;
+}
+
+.main-nav-btn-container {
+  flex-basis: 25%;
+}
+
+.sign-in-btn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.main-navlinks-container {
+  padding-top: 1rem;
+  color: var(--primary-color);
+  width: 100%;
+}
+
+.main-navlist {
+  display: flex;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+}
+
+.main-navlink {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  align-items: center;
+  color: #233c7b;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.mobile-nav-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-container {
+    padding: 0;
+  }
+
+  .main-navlinks-container,
+  .main-nav-container {
+    display: none;
+  }
+
+  .mobile-nav-wrapper {
+    display: block;
+    width: 100%;
+    height: 55px;
+    background-color: var(--text-light-color);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
+  }
+
+  .mobile-logo-img-container {
+    flex: 0.7;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-width: 170px;
+  }
+
+  .mobile-logo-img {
+    width: 100%;
+    max-width: 125px;
+  }
+}
+
+/* => Banner Classes */
+.banner-container {
+  width: 100%;
+  height: 90vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-container {
+    height: fit-content;
+  }
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* => 2nd Section Classes */
+
+.section-2 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-2-container {
+  padding-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-2-heading {
+  padding-bottom: 4rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+
+  color: var(--primary-color);
+}
+
+.section-2-hr {
+  background-color: var(--secondary-color);
+  height: 2px;
+  width: 8rem;
+  margin-top: -3.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.section-2-card-container {
+  gap: 2.5rem;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.s2-card {
+  gap: 0.5rem;
+  justify-content: space-around;
+
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.s2-card-img {
+  padding-bottom: 0.75rem;
+  width: 10rem;
+}
+
+.s2-card-count {
+  color: var(--primary-color);
+
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin: 8px 0;
+}
+
+.s2-card-desc {
+  color: var(--text-dark-color);
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .section-2-heading {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .section-2-card-container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-2-heading {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
